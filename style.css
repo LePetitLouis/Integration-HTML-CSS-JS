@@ -7,7 +7,7 @@
 }
 
 body{
-    padding: 3% 6%;
+    padding-top: 3%;
     font-size: 18px;
 }
 
@@ -27,6 +27,14 @@ h3{
     font-family: 'Rubik', sans-serif;
     font-weight: 500;
     font-size: 1em;
+}
+
+h6{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 6px;
 }
 
 p{
@@ -69,6 +77,22 @@ p{
     border: 1px solid #000;
 }
 
+.btn-red{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    background-color: hsl(0, 94%, 66%);
+    border: 1px solid hsl(0, 94%, 66%);
+    color: #fff;
+    padding: 1% 2%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-red:hover{
+    background-color: #fff;
+    color: hsl(0, 94%, 66%);
+}
+
 .activeListe{
     border-bottom: 3px solid hsl(0, 94%, 66%)!important;
     opacity: 1!important;
@@ -91,10 +115,11 @@ nav{
     padding: 3% 6%;
     display: flex;
     justify-content: space-between;
+    z-index: 1;
 }
 
 nav ul{
-    width: 40%;
+    width: 45%;
 }
 
 nav ul li{
@@ -110,10 +135,23 @@ nav li a{
     text-transform: uppercase;
 }
 
+nav li a:hover{
+    color: hsl(0, 94%, 66%);
+}
+
 nav .login{
     background-color: hsl(0, 94%, 66%);
+    border: 1px solid hsl(0, 94%, 66%);
     border-radius: 5px;
     cursor: pointer;
+}
+
+nav .login:hover{
+    background-color: #fff;
+}
+
+nav .login:hover a{
+    color: hsl(0, 94%, 66%);
 }
 
 nav .login a{
@@ -130,6 +168,7 @@ nav ul li a{
     display: grid;
     grid-template-columns: 1fr 1fr;
     min-height: 100vh;
+    padding: 0 6%;
 }
 .secOne .textManager{
     display: flex;
@@ -164,6 +203,10 @@ nav ul li a{
 }
 
 /** SECTION FEATURES **/
+.features{
+    padding: 0 6%;
+}
+
 .features .titlefeature p{
     margin: 20px 27%;
 }
@@ -209,7 +252,7 @@ nav ul li a{
     height: 54%;
     top: 163%;
     right: 55%;
-    border-radius: 0 0 45% 0;
+    border-radius: 0 50% 45% 0;
     position: absolute;
     background-color: hsl(231, 69%, 60%);
 }
@@ -226,6 +269,9 @@ nav ul li a{
 }
 
 /** SECTION DOWNLOAD **/
+.download{
+    padding: 0 6%;
+}
 
 .download .titleDownload{
     padding: 0 28%;
@@ -276,3 +322,132 @@ nav ul li a{
 }
 
 /** SECTION FAQ **/
+.faq{
+    padding: 14% 6%;
+}
+
+.titleFaq p{
+    padding: 0 28%;
+}
+
+.question{
+    display: flex;
+    flex-direction: column;
+    margin: 2% 25%;
+    padding: 2% 0;
+    border-bottom: 1px solid;
+}
+
+.question label{
+    position: relative;
+    cursor: pointer;
+    font-family: 'Rubik', sans-serif;
+}
+
+.question label:hover{
+    color: hsl(0, 94%, 66%);
+}
+
+.question p{
+    color: hsl(229, 31%, 21%)!important;
+    opacity: 0.8;
+    font-size: 0.8em;
+}
+
+label::before{
+    content: '';
+    background: url(images/icon-arrow.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 30%;
+    height: 50%;
+    left: 90%;
+}
+
+.question input, .question p{
+    display: none;
+}
+
+.question input[type=checkbox]:checked~p{
+    display: block;
+}
+
+.question input[type=checkbox]:checked~label::before{
+    content: '';
+    background: url(images/icon-arrow.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 30%;
+    height: 50%;
+    left: 63%;
+    transform: rotate(180deg);
+}
+
+.faqBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.faqBtn button{
+    padding: 1% 2%;
+    margin-top: 30px;
+}
+
+/** SECTION CONTACT **/
+.contact{
+    padding: 6% 0;
+    text-align: center;
+    background-color: hsl(231, 69%, 60%);
+}
+
+.contact h2{
+    color: #fff!important;
+    padding: 2% 30%;
+}
+
+.contact input{
+    padding: 1% 2%;
+    border-radius: 5px;
+    border: 1px solid;
+    margin-right: 15px;
+    width: 28%;
+}
+
+/** FOOTER **/
+footer{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    padding: 2% 6%;
+    background-color: hsl(229, 31%, 21%);
+}
+
+.logo-white{
+    max-width: 50%;
+}
+
+footer li{
+    float: left;
+    list-style: none;
+    padding: 0 7%;
+}
+
+footer li a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Rubik', sans-serif;
+    font-size: 0.7em;
+}
+
+footer li a:hover{
+    color: hsl(0, 94%, 66%);
+}
+
+footer .fb, .twitter{
+    cursor: pointer;
+}
+
+footer .fb:hover{
+    color: hsl(0, 94%, 66%);
+}
